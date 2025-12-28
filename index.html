@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Tahun Baru 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+        url("langit-malam.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Nama */
+.nama {
+    margin-top: 40px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+}
+
+/* Judul */
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 58px;
+    margin-top: 20px;
+    animation: fadeIn 5s forwards;
+}
+
+/* Kata */
+.kata {
+    max-width: 800px;
+    margin: 40px auto;
+    font-size: 18px;
+    line-height: 1.9;
+    padding: 30px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    animation: fadeIn 6s forwards;
+}
+
+/* Galeri */
+.galeri {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+
+.galeri img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    margin: 12px;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(255,255,255,0.3);
+    transition: 0.4s;
+}
+
+.galeri img:hover {
+    transform: scale(1.05);
+}
+
+/* Bulan */
+.moon {
+    position: fixed;
+    top: 60px;
+    right: 60px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at 30% 30%, #fff, #d9d9d9);
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(255,255,255,0.8);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Bintang */
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    margin: 40px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-15px);}
+    100% {transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="moon"></div>
+
+<div class="stars"></div>
+
+<div class="nama">
+    Untuk <span id="nama">[Devi Ulandari]</span>
+</div>
+
+<h1>Selamat Tahun Baru 2026</h1>
+
+<div class="kata">
+    <p>
+        Di bawah langit malam ini,<br>
+        aku masih mengingatmu dengan tenang.
+    </p>
+
+    <p>
+        Tahun 2025 telah berlalu,<br>
+        membawa cerita yang pernah begitu berarti.
+    </p>
+
+    <p>
+        Kini kita tak lagi berjalan bersama,<br>
+        tapi doa baikku akan selalu menemukanmu.
+    </p>
+
+    <p>
+        Jika suatu hari kamu benar-benar bahagia,<br>
+        ketahuilah…<br>
+        aku pernah mencintaimu dengan sungguh-sungguh.
+    </p>
+
+    <p>
+        Terima kasih sudah menjadi bagian dari hidupku 🤍
+    </p>
+</div>
+
+<div class="galeri">
+    <img src="foto1.jpg">
+    <img src="foto2.jpg">
+    <img src="foto3.jpg">
+    <img src="foto4.jpg">
+    <img src="foto5.jpg">
+</div>
+
+<audio autoplay loop>
+    <source src="audio.mp3" type="audio/mpeg">
+</audio>
+
+<footer>
+    Kenangan 2025 — you once made me happy
+</footer>
+
+<script>
+for(let i=0;i<150;i++){
+    let star=document.createElement("div");
+    star.className="star";
+    star.style.left=Math.random()*100+"%";
+    star.style.top=Math.random()*100+"%";
+    star.style.opacity=Math.random();
+    document.querySelector(".stars").appendChild(star);
+}
+</script>
+
+</body>
+</html>
